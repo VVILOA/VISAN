@@ -1,0 +1,9 @@
+#Restringimos el acceso a los directorios.
+Options All -Indexes
+
+#Añadimos sobre escritura. Para permitir una regla de sobreescritura.
+RewriteEngine On
+
+#añadimos la regla de sobreescritura.
+#Expresion regular donde definimos los caracteres permitidos en este caso de la aA-zZ y del 0-9 con - /
+RewriteRule	^([-a-zA-z0-9/]+)$ index.php?ruta=$1
